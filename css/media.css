@@ -1,0 +1,303 @@
+@media screen and (max-width:1300px) {
+    .section3 .gallery .gallery-box {
+        height: 900px;   
+    }
+
+    .section3 .gallery .gallery-box .photo {
+        width: 30%;
+    }
+
+}
+
+
+
+@media screen and (max-width:1180px) {
+
+    .footer .content {
+        justify-content: center;
+        margin: auto;
+        
+    }
+
+    .footer .content .about{
+        width: 45%;
+        order: 1;
+        margin-right: 30px;
+    }
+
+    .footer .content .subscribe{
+        width: 90%;
+        order: 3;
+    }
+
+    .footer .content .touch{
+        width: 45%;
+        order: 2;
+    }
+
+    .navbar .nav .links
+    {
+        display: flex;
+        width: 40%;
+        padding: 15px;
+        font-size:17px;
+        font-weight: 600;
+        justify-content: space-around;
+        color: #7f7f90;
+    }
+
+    .navbar .nav .links
+     {
+        display: none;
+    }
+
+    .navbar .nav .menu-icon{
+        display: block;
+        
+    }
+
+    .navbar .nav .menu-icon:hover .menu{
+        transform: translateX(0%);
+    }
+
+}
+
+
+@media screen and (max-width:988px) {
+    
+    .section3 .gallery .gallery-box {
+        height: 1750px;   
+    }
+
+    .section3 .gallery .gallery-box .photo {
+        width: 48%;
+    
+    }
+
+    .pizza{
+        order: 1;
+    }
+
+    .p-slice{
+        order: 3;
+    }
+
+    .meat{
+        order: 5;
+    }
+
+    .egg{
+        order: 4;
+    }
+
+    .burger{
+        order: 2;
+    }
+
+    .fried{
+        order: 6;
+    }
+
+    .kofta{
+        order: 7;
+    }
+}
+
+
+@media screen and (max-width:980px) {
+
+    .section1-content{
+        display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+       text-align: center;
+        padding: 60px 0px;
+        flex-wrap:wrap-reverse;
+    }
+
+    .section1 .section1-content .image{
+        width: 85%;
+            
+    }
+    .section1 .section1-content .content{
+        margin-top: 50px;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section2 .chefs{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .section2 .chefs .chef{
+        width: 48%;
+        
+    }
+
+    .section4 .contact , .map {
+        justify-content: center;
+    }
+
+    .map{
+        width: 80%;
+        margin: auto;
+    }
+
+    .address , .email , .p-number , .open-hours {
+        width: 80%; 
+    }
+
+    form{
+        width: 80%;
+    }
+
+    .section2 .chefs .William{
+        justify-content: flex-start ;
+    }
+
+    .section4 form .name-email input{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:763px) {
+
+    .section1 .section1-content .image{
+        width: 80%;
+            
+    }
+
+    .section1  .section1-content .content .btns .btn-book{
+        margin-right: 20px;
+        padding: 12px 20px;
+        border-radius: 20px;
+    }
+ 
+    .section2 .chefs .chef{
+        width: 100%;
+        
+    }
+
+    .section3 .gallery .gallery-box {
+        height: auto; 
+        align-items: center;  
+    }
+
+    .section3 .gallery .gallery-box .photo {
+        width: 100%;
+    }
+
+    
+    
+    
+}
+
+@media screen and (max-width:730px) {
+
+    .section1 .section1-content .image{
+        width: 85%;
+            
+    }
+    .section1 .section1-content .content{
+        width: 65%;
+    }
+
+    .footer .content .about{
+        width: 90%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .footer .content .subscribe{
+        width: 90%;
+        order: 2;
+        margin-bottom: 20px;
+    }
+
+    .footer .content .touch{
+        width: 90%;
+        order: 3;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .section1 .section1-content .image{
+        width: 100%;
+            
+    }
+    .section1 .section1-content .content{
+        margin-top: 50px;
+        width: 100%;
+        
+    }
+
+    .section2 .chefs .chef{
+        width: 100%;
+        
+    }
+
+    .section3 .gallery .gallery-box .photo {
+        width: 100%;
+    
+    }
+
+    .map{
+        width: 100%;
+        margin: auto;
+    }
+
+    .address , .email , .p-number , .open-hours {
+        width: 100%;
+        
+        
+    }
+
+    .map{
+        width: 100%;
+        margin: auto;
+    }
+
+    .address , .email , .p-number , .open-hours {
+        width: 100%; 
+    }
+
+    form{
+        width: 100%;
+    }
+    /* .section2 .chefs .William{
+    } */
+
+    .section4 form .name-email input{
+        width: 100%;
+    }
+
+    
+    .footer .content .about{
+        width: 100%;
+        order: 1;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer .content .subscribe{
+        width: 100%;
+        order: 2;
+        margin-bottom: 20px;
+    }
+
+    .footer .content .touch{
+        width: 100%;
+        order: 3;
+    }
+
+    
+}

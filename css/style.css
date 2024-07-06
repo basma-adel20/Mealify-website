@@ -1,0 +1,773 @@
+:root{
+    --main-color: #eee;
+    --sub-color: #ce1212;
+    --body-color: #fff;
+    --row-color:#F5F5F5;
+    --text-color:#000;
+    --nav-color:#fff;
+    --p-color: #4f4f5a;
+    --hover-color:#E61414;
+    --card-color:#fff;
+    --url:url('../images/team-shape.svg');
+    
+}
+
+* , *::after ,*::before{
+    box-sizing: border-box;
+}
+
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+body{
+  margin: 0;
+  background-color: var(--body-color);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/************************************* navbar ******************************************/
+
+.navbar{
+    background-color:var(--nav-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+
+.navbar .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    background-color: var(--nav-color);
+    z-index: 10;
+}
+
+.navbar .nav h1{
+    font-size: 30px;
+    width: 10%;
+    cursor: pointer;
+}
+
+.navbar .nav h1::after{
+    content: ".";
+    font-size: 30px;
+    color: var(--sub-color);
+}
+
+.navbar .nav .links{
+    display: flex;
+    width: 25%;
+    padding: 15px;
+    font-size:17px;
+    font-weight: 600;
+    justify-content: space-around;
+    color: #7f7f90;
+}
+
+.navbar .nav .links li .home  {
+    color: var(--text-color);
+    position: relative;
+
+}
+
+.navbar .nav .mode {
+    font-size:25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.navbar .nav .links li .child {
+    position: relative;
+}
+
+.navbar .nav .links li .child::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    background-color:var(--sub-color);
+    height: 2.5px;
+    transition: width 0.5s;
+}
+
+.navbar .nav .links li .child:hover , .navbar .nav .mode .menu li .child:hover{
+    color: var(--text-color);
+}
+
+.navbar .nav .links li .child:hover::after  {
+   width: 100%;
+}
+
+.navbar .nav .links li .home::after  {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color:var(--sub-color);
+    height: 2.5px;
+}
+
+.navbar .nav .menu-icon{
+    cursor: pointer;
+    font-size: 1.5625rem;
+    display: none;
+    padding-left: 20px;
+}
+
+.navbar .nav .mode .menu-list{
+    position: relative;
+}
+
+.navbar .nav .mode .menu{
+    transform: translateX(100%);
+    transition: transform 1s;
+    position: absolute;
+    width: 350px;
+    background-color: #fff;
+    top: -50px;
+    right: -80px;
+    font-size: 17px;
+    height: 100vh;
+    padding: 50px 0px 0px 20px;
+    color: #7f7f90;
+    font-weight: 600;
+}
+
+.navbar .nav .menu-list:hover .menu{
+    transform: translateX(0%);
+}
+
+.navbar .nav .mode .menu li {
+    padding-bottom: 20px;
+}
+
+
+
+/************************************* header section1 ******************************************/
+.section1 .section1-content .image{
+    width: 40%;
+    filter: drop-shadow(4px 4px 9px #000a);   
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
+}
+
+
+.section1 .section1-content .image:hover{
+    animation-name: zip ;
+    
+}
+@keyframes zip {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+    }
+    
+
+
+.section1  .section1-content .content{
+    width: 38%;
+}
+
+.section1{
+    background-color: var(--main-color);
+    margin-top: 85px;
+}
+
+.section1-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 60px 0px;
+}
+
+.section1  .section1-content .content h2{
+    color: var(--text-color);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    margin: 0px;
+}
+
+.section1 .content p{
+    color: var(--p-color);
+    line-height: 1.6;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+}   
+
+
+.section1  .section1-content .content .btns{
+    display: flex;
+    align-items: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+}
+
+.section1  .section1-content .content .btns .btn-book{
+    margin-right: 40px;
+    padding: 12px 20px;
+    background-color: var(--sub-color);
+    color: #fff;
+    border-radius: 0px 20px 20px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.section1  .section1-content .content .btns .btn-book:hover{
+    background-color: var(--hover-color);
+}
+
+.section1  .section1-content .content .btns .video-btn{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--text-color);
+    
+}
+
+.section1  .section1-content .content .btns .video-btn .icon{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient( to right, var(--sub-color) 0 50%, transparent 50% 100% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section1  .section1-content .content .btns .video-btn .icon::before{
+   position: absolute;
+   content: "";
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   background-color: var(--body-color);
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+}
+.section1  .section1-content .content .btns .video-btn .icon i{
+    z-index: 3;
+
+}
+
+.section1  .section1-content .content .btns .video-btn:hover{
+    color: var(--sub-color);
+}
+
+
+/********************************************* section2 chefs **************************************/
+
+.section2 , .section4 , .section3 {
+    margin: 70px auto;
+    text-align: center;
+}
+
+.section2 .chefs{
+    display: flex;
+    justify-content: space-between;
+}
+.section2 h2{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #7F7F90;
+    font-weight: 400;
+}
+
+.section2 p{
+    color: var(--text-color);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.section2 p span{
+    color: var(--sub-color);
+}
+
+.section2 .chefs .chef{
+    width: 32%;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-color);
+    transition: transform 1s ;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section2 .chefs .chef:hover {
+   transform: scale(1.05,1.05);
+
+}
+
+.section2 .chefs .chef:hover ul{
+  transform: translateX(0px);
+}
+
+.section2 .chefs .chef .chef-image{
+    position: relative;
+
+}
+.section2 .chefs .chef .chef-image img{
+    border-radius: 10px;
+
+}
+.section2 .chefs .chef .chef-image::before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-image: var(--url);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.75rem;
+}
+
+.section2 .chefs .chef .chef-content{
+    padding: 0px 25px 25px;
+}
+
+.section2 .chefs .chef .chef-content h3{
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+.section2 .chefs .chef .chef-content p , .section2 .chefs .chef .chef-content span{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: var(--p-color);
+}
+
+.section2 .chefs .chef .chef-content p {
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.section2 .chefs .chef ul{
+    background-color: #ffffff4d;
+    width: fit-content;
+    padding: 20px 20px 0px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translateX(90px);
+    transition: transform 1s ;
+}
+
+.section2 .chefs .chef ul li{
+   margin-bottom: 20px;
+}
+
+.section2 .chefs .chef ul li i{
+    color: var(--text-color)66;
+}
+
+.section2 .chefs .chef ul li i:hover{
+    color: #4B4A50;
+
+}
+
+
+/****************************************** secction 3 gallery ********************************/
+
+.section3{
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.section3 .gallery{
+    padding: 60px 0px;
+}
+
+.section3 .gallery h2{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #7F7F90;
+    font-weight: 400;
+    padding: 20px 0px 0px;
+}
+
+.section3 .gallery p {
+    color: var(--text-color);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.section3 .gallery p span {
+    color: var(--sub-color);
+}
+
+
+.section3 .gallery .gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 72.8125rem; */
+    height: 1180px;
+
+}
+
+.section3 .gallery .gallery-box .photo {
+    width: 32%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #fff;
+
+}
+
+.section3 .gallery .gallery-box .photo .layer{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    padding: 0.9375rem;
+    background-color: #00000096;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(105%);
+    transition: transform 0.5s;
+
+ }
+
+.section3 .gallery .gallery-box .photo .layer p , .section3 .gallery .gallery-box .photo .layer h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.section3 .gallery .gallery-box .photo .layer h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.section3 .gallery .gallery-box .photo:hover img{
+    transform: scale(1.2,1.2);
+    transition: transform 0.5s;
+
+}
+
+.section3 .gallery .gallery-box .photo:hover .layer{
+    transform: translateY(0%);
+}
+/******************************************** section 4 contact **********************************/
+
+
+.section4 h2{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #7F7F90;
+    font-weight: 400;
+}
+
+.section4 p{
+    color: var(--text-color);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.section4 p span{
+    color: var(--sub-color);
+}
+
+.section4 .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.address , .email , .p-number , .open-hours {
+    width: 49.5%;
+    margin: 8px 0px;
+    padding: 25px ;
+    background-color: var(--row-color);
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+}
+
+.section4 .contact a{
+    color: var(--text-color);
+}
+
+.section4 .contact h3{
+    color:#7D7D7D;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.address-content p, .p-content p, .email-content p, .open-content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+    
+}
+
+.section4 .contact i {
+    color: #fff;
+}
+
+.section4 .contact .icon{
+    border-radius: 50%;
+    background-color: var(--sub-color);
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.section4 form {
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 1.875rem #00000014;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color);
+}
+
+.section4 form .name-email {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.section4 form input , .section4 form textarea , .section4 form button {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e1e1;
+}
+.section4 form button{
+    width: fit-content;
+    background-color: var(--sub-color);
+    border-radius: 30px;
+    color: #fff;
+    padding: 20px 45px;
+    border: none;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.section4 form .name-email input{
+    width: 49.5%;
+}
+
+.section4 form textarea{
+    resize: vertical;
+    min-height: 130px;
+}
+
+.section4 form button:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+/**************************************** footer ****************************************/
+
+.footer{
+    background-image: linear-gradient(#0009, #0009), url(../images/textured-metal-background.jpg);
+    color: #fff;
+}
+
+.footer .content {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.footer .content .about{
+    width: 24%;
+}
+.footer .content .about p{
+    margin: 0px 0px 16px;
+}
+.footer .content .about .about-img{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .content .about .about-img img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer .content .about .about-img .logo{
+    margin: 0;
+}
+
+.footer .content .about .about-img .logo::after{
+    content: ".";
+    color:var(--sub-color);
+}
+
+.footer .content h3{
+    margin: 0px ;
+}
+
+.footer .content .about h3{
+    padding: 8px;
+    border-bottom: 2px solid #ddd6;
+    text-align: center;
+}
+
+
+.footer .content .about ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.footer .content .about ul li i{
+    width: 20%;
+    font-size: 25px;
+}
+
+.footer .content .subscribe{
+    width: 47%;
+}
+
+.footer .subscribe .sunscripe-email{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .subscribe .sunscripe-email input{
+    width: 79%;
+    padding: 10px;
+}
+
+.footer .subscribe .sunscripe-email button{
+    width: 20%;
+    padding: 10px;
+    background-color: var(--sub-color);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+.footer .subscribe .sunscripe-email button:hover {
+    background-color: var(--hover-color);
+}
+
+.footer .subscribe .quick-links h3{
+    margin-top: 12px;
+}
+
+.footer .subscribe .quick-links ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 5px;
+    align-items: center;
+}
+
+.footer .subscribe .quick-links ul li{
+    width: 40%;
+    transition: transform 1s ;
+    padding: 5px ;
+
+}
+
+.footer .subscribe .quick-links ul li i{
+    margin-right: 10px;
+}
+
+.footer .subscribe .quick-links ul li:hover{
+   transform: translateX(20px);
+   background-color: #222222;
+}
+
+.footer .content .touch{
+    width: 23%;
+}
+
+.footer .content .touch ul li{
+    display: flex;
+    align-items: center;
+}
+
+.footer .content .touch ul li i{
+    font-size: 25px;
+    margin: 12px ;
+    color: var(--sub-color);
+    width: fit-content;
+    cursor: pointer;
+}
+
+/*************************** media **********************/
